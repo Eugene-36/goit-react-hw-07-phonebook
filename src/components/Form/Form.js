@@ -6,7 +6,7 @@ import { v4 as unId } from "uuid";
 //todo:
 import { connect } from "react-redux";
 import userAction from "../../redux/actions/create-user";
-import addUserAction from "../../redux/actions/userActions";
+import todosOperations from "../../redux/actions/todos-operations";
 class Form extends Component {
   loginInputId = shortid.generate();
   numberInputId = shortid.generate();
@@ -75,6 +75,6 @@ class Form extends Component {
 }
 
 const mapDispatchToProps = {
-  y: addUserAction.addUser,
+  y: todosOperations.addTodo,
 };
 export default connect(null, mapDispatchToProps)(Form);

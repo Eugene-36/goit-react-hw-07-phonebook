@@ -2,8 +2,6 @@ import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import logger from "redux-logger";
 import todosReducer from "../redux/reducers/allUsersReducer";
 import {
-  persistStore,
-  persistReducer,
   FLUSH,
   REHYDRATE,
   PAUSE,
@@ -11,12 +9,16 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+//import storage from "redux-persist/lib/storage";
+const myMiddleware = (store) => (next) => (action) => {
+  console.log("моя прослойка", action);
 
-const persistConfig = {
-  key: "contacts",
-  storage,
+  next(action);
 };
+// const persistConfig = {
+//   key: "contacts",
+//   storage,
+// };
 
 const middleware = [
   ...getDefaultMiddleware({
@@ -25,18 +27,19 @@ const middleware = [
     },
   }),
   logger,
+  myMiddleware,
 ];
-const todosPersistConfig = {
-  key: "contacts",
-  storage,
-  blacklist: ["filter"],
-};
+// const todosPersistConfig = {
+//   key: "contacts",
+//   storage,
+//   blacklist: ["filter"],
+// };
 const store = configureStore({
   reducer: {
-    allUsers: persistReducer(todosPersistConfig, todosReducer),
+    allUsers: todosReducer,
   },
   middleware,
 });
 
-const persistor = persistStore(store);
-export default { store, persistor };
+//const persistor = persistStore(store);
+export default store;

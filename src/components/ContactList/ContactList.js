@@ -2,7 +2,7 @@ import React from "react";
 import { v4 as unId } from "uuid";
 import Contacts from "./Contacts.module.css";
 import { connect } from "react-redux";
-import actions from "../../redux/actions/userActions";
+import todosOperations from "../../redux/actions/todos-operations";
 // import actions from "../../redux/actions/userActions";
 const ContactList = ({ allUsers, onDelete }) => (
   <ul className="TodoList">
@@ -30,16 +30,12 @@ const filterContacts = (allContacts, filter) => {
     name.toLowerCase().includes(normalizedFilter)
   );
 };
-console.log(filterContacts);
 
-//const mapStateToProps = (store) => ({ allUsers: store.allUsers });
 const mapStateToProps = ({ allUsers: { contacts, filter } }) => ({
   allUsers: filterContacts(contacts, filter),
-  //console.log(filter, contacts);
 });
-// const mapStateToProps = (allUsers) => console.log(allUsers.allUsers);
 
 const mapDispatchToProps = {
-  onDelete: (id) => actions.deleteUser(id),
+  onDelete: (id) => todosOperations.deleteTodo(id),
 };
 export default connect(mapStateToProps, mapDispatchToProps)(ContactList);
