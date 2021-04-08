@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 
-import filterUser from "../../redux/actions/userActions";
+import { changeFilter } from "../../redux/actions/index";
 import { connect } from "react-redux";
+import getFilterSelctors from "../../redux/actions/contacts-selectors";
 
-//console.log(props);
 const Filter = ({ value, onChange }) => {
-  //console.log(value);
-  // const { value, onChange } = this.props;
-  // console.log(value);
   return (
     <div>
       <label>
@@ -24,11 +21,11 @@ const Filter = ({ value, onChange }) => {
 };
 
 const mapStateToProps = (state) => ({
-  value: state.allUsers.filter,
+  value: getFilterSelctors.getFilter(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  onChange: (e) => dispatch(filterUser.changeFilter(e.target.value)),
+  onChange: (e) => dispatch(changeFilter(e.target.value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filter);

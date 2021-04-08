@@ -1,5 +1,5 @@
 {
-  "todos": [
+  "contacts": [
     {
       "id": "id-3",
       "text": "Привыкнуть к Redux",
@@ -347,6 +347,101 @@
       "name": "Rosie Simpson",
       "number": "4443-89-12",
       "id": "9a40497a-1988-4f5b-904e-187d9f08df7c"
+    },
+    {
+      "name": "Rosie Simpson",
+      "number": "4443-89-12",
+      "id": "0e95e747-96df-472a-9177-a782548747db"
+    },
+    {
+      "name": " Eugene",
+      "number": "4443-89-12",
+      "id": "c8891eb4-3f40-4232-b85e-a837832315cb"
+    },
+    {
+      "name": "Rosie Simpson",
+      "number": "4443-89-12",
+      "id": "621363fa-b268-49c2-809c-ff96d66f6b52"
+    },
+    {
+      "name": "Rosie Simpson",
+      "number": "4443-89-12",
+      "id": "6785aa52-3242-47d4-a211-7176934ae434"
+    },
+    {
+      "name": "Eden Clements",
+      "number": "4545-66-36",
+      "id": "8c77f70f-9093-44a3-a431-f52aa493f2d7"
+    },
+    {
+      "name": " Eugene",
+      "number": "666666",
+      "id": "eebb84bb-cc09-4f27-a46d-d86829abc93d"
+    },
+    {
+      "name": "Rosie Simpson",
+      "number": "4443-89-12",
+      "id": "a4201cbd-312b-4a5a-8083-64ccd8aed5b4"
+    },
+    {
+      "name": "Hermione Kline",
+      "number": "4443-89-12",
+      "id": "18281628-ecf4-4710-97a5-aa87ef18be20"
+    },
+    {
+      "name": "Larson ",
+      "number": "4443-89-12",
+      "id": "9a0e76f9-0b8a-47b6-b70f-587d62f88188"
+    },
+    {
+      "name": "Rosie Simpson",
+      "number": "4443-89-12",
+      "id": "7a5c3878-9480-492d-b551-ab63cf56f4e2"
+    },
+    {
+      "name": "Hermione Kline",
+      "number": "4443-89-12",
+      "id": "3238867a-8fe9-4300-b30f-266b20516c06"
+    },
+    {
+      "name": "Rosie Simpson",
+      "number": "4443-89-12",
+      "id": "8231152d-2cbc-4278-b658-2f472634eb84"
+    },
+    {
+      "name": "Hermione Kline",
+      "number": "4443-89-12",
+      "id": "1eb877cb-c4a0-4bf1-8a80-ead08e849c5c"
+    },
+    {
+      "name": "Hermione Kline",
+      "number": "4443-89-12",
+      "id": "f0fcc227-08b9-4f8e-824a-4137fddf57d6"
+    },
+    {
+      "name": "Eden Clements",
+      "number": "4443-89-12",
+      "id": "59e0df34-61f8-4b72-b739-7ba4172f700a"
+    },
+    {
+      "name": "Rosie Simpson",
+      "number": "4443-89-12",
+      "id": "e69bb863-1c43-4f79-b6ed-a1f0dc601856"
+    },
+    {
+      "name": "Eden Clements",
+      "number": "4443-89-12",
+      "id": "4d1eb02a-5202-4857-9f71-9509bedead69"
+    },
+    {
+      "name": "Hermione Kline",
+      "number": "4443-89-12",
+      "id": "e7d05ac3-ad1c-4601-8408-ba7303dd8ba5"
+    },
+    {
+      "name": "Rosie Simpson",
+      "number": "4443-89-12",
+      "id": "ddb8476c-1d9a-4321-bc36-0aa0b2a255b6"
     }
   ]
 }

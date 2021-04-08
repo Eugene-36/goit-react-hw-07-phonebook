@@ -6,10 +6,6 @@ const fetchTodos = () => {
   return axios.get("/todos").then((respons) => respons.data);
 };
 
-// const addTodo = (todo) => {
-//   return axios.post("/todos", todo).then(({ data }) => data);
-// };
-
 const deleteTodo = (todoId) => {
   return axios.delete(`/todos/${todoId}`);
 };

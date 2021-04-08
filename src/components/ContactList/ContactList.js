@@ -2,8 +2,8 @@ import React from "react";
 import { v4 as unId } from "uuid";
 import Contacts from "./Contacts.module.css";
 import { connect } from "react-redux";
-import todosOperations from "../../redux/actions/todos-operations";
-// import actions from "../../redux/actions/userActions";
+import { todosOperations, visibleSelectors } from "../../redux/actions/index";
+
 const ContactList = ({ allUsers, onDelete }) => (
   <ul className="TodoList">
     {allUsers.map(({ id, name, number }) => (
@@ -23,16 +23,8 @@ const ContactList = ({ allUsers, onDelete }) => (
   </ul>
 );
 
-const filterContacts = (allContacts, filter) => {
-  console.log(filter);
-  const normalizedFilter = filter.toLocaleLowerCase();
-  return allContacts.filter(({ name }) =>
-    name.toLowerCase().includes(normalizedFilter)
-  );
-};
-
-const mapStateToProps = ({ allUsers: { contacts, filter } }) => ({
-  allUsers: filterContacts(contacts, filter),
+const mapStateToProps = (state) => ({
+  allUsers: visibleSelectors.getVisibleContacts(state),
 });
 
 const mapDispatchToProps = {

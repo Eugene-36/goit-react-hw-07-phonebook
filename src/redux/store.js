@@ -1,6 +1,6 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import logger from "redux-logger";
-import todosReducer from "../redux/reducers/allUsersReducer";
+import { reducer } from "./actions/index";
 import {
   FLUSH,
   REHYDRATE,
@@ -36,7 +36,7 @@ const middleware = [
 // };
 const store = configureStore({
   reducer: {
-    allUsers: todosReducer,
+    allUsers: reducer,
   },
   middleware,
 });
